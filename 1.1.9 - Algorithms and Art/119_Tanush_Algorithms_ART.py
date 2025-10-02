@@ -56,10 +56,33 @@ for arm in range(arms):
         size = random.randint(5,15)
         draw_star(size,color)
 
+ # extra title
 galaxy.penup()
 galaxy.goto(-250,-250)
 galaxy.color("white")
-galaxy.write("67", align="center", font=("Arial", 16, "bold"))
+galaxy.write("Galaxy Creator", align="center", font=("Arial", 16, "bold"))
+
+#----------------------------------------------------------
+extra = screen.textinput("Extra Feature", "Would you like a planet with 67 in it? (yes/no")
+
+if extra and extra.lower() == "yes":
+#67 planet draw
+    galaxy.penup()
+    galaxy.goto(-150,-150)
+    galaxy.pendown()
+    galaxy.color("purple")
+    galaxy.begin_fill()
+    galaxy.circle(80)
+    galaxy.end_fill()
+
+
+#----------------------------------------------------------
+#inside of planet finish
+    galaxy.penup()
+    galaxy.goto(-150, -70) #search how to move up in circle
+    galaxy.color("white")
+    galaxy.write("67", align="center", font=("Arial", 36, "bold"))
+    galaxy.pendown()
 
 galaxy.hideturtle()
 screen.mainloop()
