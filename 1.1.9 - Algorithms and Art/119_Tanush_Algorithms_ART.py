@@ -87,3 +87,4 @@ if extra and extra.lower() == "yes":
 galaxy.hideturtle()
 screen.mainloop()
     
+    # (-190, -95),      (-150, -70) , old coords
