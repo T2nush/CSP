@@ -5,5 +5,27 @@ Set up extra feature, each guess user has, they can guess a letter and a number,
 #If all body parts are there, show lose screen Nov 1st or 2nd
 #If word guessed, show win screen nov 1st-3rd
 
+# hangman_superpower.py
+# Project 1.2.5 Hangman with number guess mechanic and one superpower
 
+import turtle   
+import random 
 
+#---------------------------------------------
+#Configuration part
+
+Word_list = [ "LIGHTHOUSE", "RESPONSIBILITY", "UNDERGROUND", "CONSTITUTION", "ASTRONOMICAL", "ENVIRONMENTAL", "LOLLYGAG"]
+MIN_WORD_LEN = 8
+
+#screen set
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 600
+
+#---------------------------------------------
+#setting up the order to draw the body parts 
+HANGMAN_PARTS = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg"] 
+MAX_WRONG = len(HANGMAN_PARTS)
+
+#---------------------------------------------
+# Turtle setup area
+screen = turtle.screen()
