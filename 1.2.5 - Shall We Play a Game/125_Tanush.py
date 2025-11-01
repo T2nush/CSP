@@ -75,6 +75,54 @@ def draw_hanger():
 
 def draw_body_parts (part):
 change.pensize(2)
+    if part == "head":
+        pen.penup()
+        pen.goto(-75,25)
+        pen.pendown()
+        pen.circle(15)
+
+    elif part == "body":
+        pen.penup()
+        pen.goto(-75, 25)
+        pen.right(90)
+        pen.pendown()
+        pen.forward(40)
+    elif part == "left_arm":
+        pen.penup()
+        pen.goto(-75, -15)
+        pen.setheading(315)
+        pen.pendown()
+        pen.forward(20)
+    elif part == "right_arm":
+        pen.penup()
+        pen.goto(-75, 15)
+        pen.pendown()
+        pen.setheading(0)
+        pen.forward(20)
+    
+    elif part == "left_leg":
+        pen.penup()
+        pen.goto(-75, -15)
+        pen.setheading(225)
+        pen.pendown()
+        pen.forward(20)
+
+    elif part == "right_leg":
+        pen.penup()
+        pen.goto(-75, -15)
+        pen.setheading(315)
+        pen.pendown()
+        pen.forward(20)
+    pen.penup()
+    pen.home()
+#--------------------------------------------
+#Screen 1 start screen 
+def start_screen():
+    pen.clear()
+    
 
 
 
+
+extreme_button = 
+extreme_button.penup()
