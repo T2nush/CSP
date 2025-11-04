@@ -119,7 +119,15 @@ change.pensize(2)
 #Screen 1 start screen 
 def start_screen():
     pen.clear()
-    
+    pen.penup()
+    pen.goto(0,100)
+    pen.write("Click the 'Hard' or 'Extremely hard'", align="center, font=("Arial", 16, "normal"))
+    pen.goto(0,40)
+
+#Both hard and the more hard button
+#-----------------------------------------------
+hard_button = turtle.Turtle()
+hard_button.penup()
 
 
 
