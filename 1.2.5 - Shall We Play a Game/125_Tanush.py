@@ -35,14 +35,6 @@ word_letters = []
 guessed = []
 #---------------------------------------------
 #Drawing the hannger and functions
-'''def draw_text(x, y, text, size=25, color="black", align="center"):
-    pen.penup()
-    pen.goto (x,y)
-    pen.color(color)
-
-    USE FOR BASE
-    pen.write(text, align=align, font=("Arial" , size, "bold" ))
-'''
 #hanger (get from google docs)
 def draw_hanger():
     pen.penup()
@@ -97,44 +89,33 @@ def draw_body_parts (part):
         pen.forward(20)
     pen.penup()
     pen.home()
-#--------------------------------------------
-'''''
-#Screen 1 start screen 
-def start_screen():
-    pen.clear()
-    pen.penup()
-    pen.goto(0,100)
-    pen.write("Click the 'Hard' or 'Extremely hard'", align="center", font=("Arial", 16, "normal"))
-    pen.goto(0,40)
 
-#Both hard and the more hard button
-#-----------------------------------------------
-
-hard_button = turtle.Turtle()
-hard_button.penup()
-
-extreme_button = 
-extreme_button.penup()
-def start_screen()
-    pen.clear()
-'''
-#--------------------------------------------
-# Line for words setup and word. *3
-def setup_word()
+# Line for words setup and word.
+def setup_word():
     global word, word_letters #for portfolio: word and word_letters, name of the variables being said as "global"""
-    word_letters = random.choice(Word_list)
+    word = random.choice(Word_list)
     word_letters = list(word) 
 
-#starting screen
+#--------------------------------------------
+#starting screen #for buttons go to 1.21 code for the ON CLICK stuff
 def start_screen():
     pen.clear()
     pen.pendown()
     pen.goto(0,120) 
     pen.write()
     pen.write("Hangman game", align="center", font=("Arial" , 25, "bold" ))
-    pen.goto(0,80)
 
-def button()
+def button(x,y):
+    global difficulty
+    #hard 
+    pen.penup()
+    pen.goto(-80,20)
+    pen.pendown()
+    for in range 
+
+# Detector for the click part (search)
+
+
     
 
 
@@ -151,8 +132,4 @@ def button()
 
 
 
-
-
-
-
-    #global difficulty part: before defining the starting game
+#global difficulty part: before defining the starting game
