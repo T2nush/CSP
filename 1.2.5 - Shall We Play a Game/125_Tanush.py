@@ -111,7 +111,8 @@ def button(x,y):
     pen.penup()
     pen.goto(-80,20)
     pen.pendown()
-    for in range 
+    for i in range (2)
+    start drawing
 
 # Detector for the click part (search)
 
