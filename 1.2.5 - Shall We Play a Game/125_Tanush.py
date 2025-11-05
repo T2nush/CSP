@@ -4,54 +4,43 @@
 # TODO #Create Superpower (only 1 option), gives back life if you are on your last life/right leg. Finish by oct 31
 # TODO If all body parts are there, show lose screen Nov 1st or 2nd
 # TODO If word guessed, show win screen nov 1st-3rd
-
-# hangman_superpower.py
 # Project 1.2.5 Hangman with number guess mechanic and one superpower
 
 import turtle   
 import random 
-
-#---------------------------------------------
 #Configuration part
-
 Word_list = [ "LIGHTHOUSE", "RESPONSIBILITY", "UNDERGROUND", "CONSTITUTION", "ASTRONOMICAL", "ENVIRONMENTAL", "LOLLYGAG"]
 MIN_WORD_LEN = 8
-
 #screen set
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
-
 #---------------------------------------------
 #setting up the order to draw the body parts 
 HANGMAN_PARTS = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg"] 
 MAX_WRONG = len(HANGMAN_PARTS)
-
 #---------------------------------------------
 # Turtle setup area
 screen = turtle.screen()
 screen.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
 screen.bgcolor("lightblue")
 screen.title("Hangman w/ Numbers and Powers")
-
-
 pen = turtle.Turtle()
 pen.hideturtle()
 pen.speed = (0)
 pen.size(5)
-
-#---------------------------------------------
 #Variables for game
 difficulty = None
 word = ""
 word_letters = []
 guessed = []
-
 #---------------------------------------------
 #Drawing the hannger and functions
 '''def draw_text(x, y, text, size=25, color="black", align="center"):
     pen.penup()
     pen.goto (x,y)
     pen.color(color)
+
+    USE FOR BASE
     pen.write(text, align=align, font=("Arial" , size, "bold" ))
 '''
 #hanger (get from google docs)
@@ -69,17 +58,13 @@ def draw_hanger():
     pen.forward(25)    # rope
     pen.penup()
     pen.home()
-
  #---------------------------------------------
-  
-
 def draw_body_parts (part):
     if part == "head":
         pen.penup()
         pen.goto(-75,25)
         pen.pendown()
         pen.circle(15)
-
     elif part == "body":
         pen.penup()
         pen.goto(-75, 25)
@@ -98,14 +83,12 @@ def draw_body_parts (part):
         pen.pendown()
         pen.setheading(0)
         pen.forward(20)
-    
     elif part == "left_leg":
         pen.penup()
         pen.goto(-75, -15)
         pen.setheading(225)
         pen.pendown()
         pen.forward(20)
-
     elif part == "right_leg":
         pen.penup()
         pen.goto(-75, -15)
@@ -136,11 +119,26 @@ def start_screen()
     pen.clear()
 '''
 #--------------------------------------------
-# Line for words setup and word. *;
+# Line for words setup and word. *3
 def setup_word()
     global word, word_letters #for portfolio: word and word_letters, name of the variables being said as "global"""
     word_letters = random.choice(Word_list)
     word_letters = list(word) 
+
+#starting screen
+def start_screen():
+    pen.clear()
+    pen.pendown()
+    pen.goto(0,120) 
+    pen.write()
+    pen.write("Hangman game", align="center", font=("Arial" , 25, "bold" ))
+    pen.goto(0,80)
+
+def button()
+    
+
+
+
 
 
 
