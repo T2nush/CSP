@@ -22,7 +22,7 @@ MAX_WRONG = len(HANGMAN_PARTS)
 # Turtle setup area
 screen = turtle.screen()
 screen.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
-screen.bgcolor("lightblue")
+screen.bgcolor("IndianRed")
 screen.title("Hangman w/ Numbers and Powers")
 pen = turtle.Turtle()
 pen.hideturtle()
@@ -111,10 +111,34 @@ def button(x,y):
     pen.penup()
     pen.goto(-80,20)
     pen.pendown()
-    for i in range (2)
-    start drawing
-
+    for i in range (2) #coordinates from doc
+        pen.forward(160)
+        pen.right(90)
+        pen.forward(40)
+        pen.right(90)
+    pen.end_fill()
+    pen.penup()
+    pen.goto(0,35)
+    pen.write ("Hard", align="center", font=("Arial" , 14, "bold" ))
 # Detector for the click part (search)
+def click(x,y)
+    global difficulty
+    if y > 0:
+        difficulty = "hard" #hard button, extremely do after
+#for the game to run completely
+def start_game():
+    pen.clear
+    pen. 
+
+
+
+
+    start_screen()
+    screen.onclick(click)
+    turtle.done()
+
+
+
 
 
     
@@ -124,7 +148,7 @@ def button(x,y):
 
 
 
-
+text.input 
 
 
 
