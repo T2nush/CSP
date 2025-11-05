@@ -4,8 +4,7 @@
 # TODO #Create Superpower (only 1 option), gives back life if you are on your last life/right leg. Finish by oct 31
 # TODO If all body parts are there, show lose screen Nov 1st or 2nd
 # TODO If word guessed, show win screen nov 1st-3rd
-# Project 1.2.5 Hangman with number guess mechanic and one superpower
-
+# Project 1.2.5 Hangman 
 import turtle   
 import random 
 #Configuration part
@@ -20,14 +19,14 @@ HANGMAN_PARTS = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg
 MAX_WRONG = len(HANGMAN_PARTS)
 #---------------------------------------------
 # Turtle setup area
-screen = turtle.screen()
+screen = turtle.Screen()
 screen.setup(SCREEN_WIDTH, SCREEN_HEIGHT)
 screen.bgcolor("IndianRed")
-screen.title("Hangman w/ Numbers and Powers")
+screen.title("Hangman")
 pen = turtle.Turtle()
 pen.hideturtle()
-pen.speed = (0)
-pen.size(5)
+pen.speed(0)
+pen.pensize(5)
 #Variables for game
 difficulty = None
 word = ""
@@ -99,62 +98,61 @@ def setup_word():
 #--------------------------------------------
 #starting screen #for buttons go to 1.21 code for the ON CLICK stuff
 def start_screen():
-    pen.clear()
-    pen.pendown()
+    pen.penup()
     pen.goto(0,120) 
-    pen.write()
+    pen.pendown()
     pen.write("Hangman game", align="center", font=("Arial" , 25, "bold" ))
+    pen.penup()
 
-def button(x,y):
+def button():
     global difficulty
     #hard 
     pen.penup()
     pen.goto(-80,20)
     pen.pendown()
-    for i in range (2) #coordinates from doc
+    for i in range(2): #coordinates from doc
         pen.forward(160)
         pen.right(90)
         pen.forward(40)
         pen.right(90)
     pen.end_fill()
     pen.penup()
-    pen.goto(0,35)
-    pen.write ("Hard", align="center", font=("Arial" , 14, "bold" ))
+    pen.goto(0,-10)
+    pen.write ("Hard", align="center", font=("Arial" , 22, "bold" ))
+#extremely hard
+    pen.penup()
+    pen.goto(-100,-40)
+    pen.fillcolor("white")
+    pen.begin_fill()
+    pen.pendown()
+    for i in range(2): 
+        pen.forward(200)
+        pen.right(90)
+        pen.forward(40)
+        pen.right(90)
+    pen.penup()
+    pen.goto(0,-70)
+    pen.write ("EXTREMELY Hard", align="center", font=("Arial" , 22, "bold" ))
+
 # Detector for the click part (search)
-def click(x,y)
+def click(x,y):
     global difficulty
     if y > 0:
         difficulty = "hard" #hard button, extremely do after
+    else:
+        difficulty = "extremely hard"
+    start_game()
 #for the game to run completely
 def start_game():
-    pen.clear
-    pen. 
-
-
-
-
-    start_screen()
-    screen.onclick(click)
-    turtle.done()
-
-
-
-
-
-    
-
-
-
-
-
-
-text.input 
-
-
-
-
-
-
-
-
-#global difficulty part: before defining the starting game
+    pen.clear()
+    draw_hanger()
+    setup_word()
+    guessed = []
+    wrong = 0
+    while True:
+        pen.penup()
+        pen.goto(-200,-200)
+        pen.clear
+        draw_hanger()
+        shown = ""
+        
