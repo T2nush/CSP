@@ -37,7 +37,7 @@ screen.title("Hangman w/ Numbers and Powers")
 pen = turtle.Turtle()
 pen.hideturtle()
 pen.speed = (0)
-pen.size(3)
+pen.size(5)
 
 #---------------------------------------------
 #Variables for game
@@ -74,7 +74,6 @@ def draw_hanger():
   
 
 def draw_body_parts (part):
-change.pensize(2)
     if part == "head":
         pen.penup()
         pen.goto(-75,25)
@@ -116,21 +115,46 @@ change.pensize(2)
     pen.penup()
     pen.home()
 #--------------------------------------------
+'''''
 #Screen 1 start screen 
 def start_screen():
     pen.clear()
     pen.penup()
     pen.goto(0,100)
-    pen.write("Click the 'Hard' or 'Extremely hard'", align="center, font=("Arial", 16, "normal"))
+    pen.write("Click the 'Hard' or 'Extremely hard'", align="center", font=("Arial", 16, "normal"))
     pen.goto(0,40)
 
 #Both hard and the more hard button
 #-----------------------------------------------
+
 hard_button = turtle.Turtle()
 hard_button.penup()
 
-
-
-
 extreme_button = 
 extreme_button.penup()
+def start_screen()
+    pen.clear()
+'''
+#--------------------------------------------
+# Line for words setup and word. *;
+def setup_word()
+    global word, word_letters #for portfolio: word and word_letters, name of the variables being said as "global"""
+    word_letters = random.choice(Word_list)
+    word_letters = list(word) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #global difficulty part: before defining the starting game
