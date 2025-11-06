@@ -148,17 +148,46 @@ def start_game():
     pen.clear()
     draw_hanger()
     setup_word()
+    shown = ["_" for i in range(len(word))]
     guessed = []
     wrong = 0
+  
     while wrong < MAX_WRONG and "_" in shown:   #meaning a placeholder for values found from hello world code reference
-        pen.penup()
-        pen.goto(-200,-200)
-        pen.clear
         draw_hanger()
        #underscores and guessed letters 
-    pen.penup()
-    pen.goto(-200,-200)
-    display = " ".join(shown)
-    pen.write
+        pen.penup()
+        pen.goto(-200,-200)
+        display = " ".join(shown)
+        pen.write(" ". join(shown), font=("Arial" , 17, "normal" ))
+        guess = screen.textinput("Your guess","Enter A Letter")
+        if not guess:
+         continue
+        g = guess.upper()[0]
+        if g in guessed:
+            continue
+        guessed.append(g)
 
+        if g in word:
+            for i in range(len(word)):
+                if word[i] == g:
+                    shown[i] = g
+        else:
+            draw_body_parts(HANGMAN_PARTS[wrong])
+            wrong += 1
+        #win and loss
+        if "_" not in shown:
+            pen.penup()
+            pen.goto(0,0)
+            pen.write("You WIN", align="center", font=("Arial", 20, "Bold"))
+            break #loop exited, for GD
+        elif wrong == MAX_WRONG:
+            pen.goto(0,0)
+            pen.write("You LOSE- Word was " + word, align="center", font=("Arial", 20, "Bold"))
+            break
+ #search how to show correct word when they get wrong
+
+start_screen()
+button()
+screen.onclick(click)
+turtle.done()
         
