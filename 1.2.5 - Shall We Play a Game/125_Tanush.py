@@ -144,15 +144,21 @@ def click(x,y):
     start_game()
 #for the game to run completely
 def start_game():
+    global word, word_letters
     pen.clear()
     draw_hanger()
     setup_word()
     guessed = []
     wrong = 0
-    while True:
+    while wrong < MAX_WRONG and "_" in shown:   #meaning a placeholder for values found from hello world code reference
         pen.penup()
         pen.goto(-200,-200)
         pen.clear
         draw_hanger()
-        shown = ""
+       #underscores and guessed letters 
+    pen.penup()
+    pen.goto(-200,-200)
+    display = " ".join(shown)
+    pen.write
+
         
