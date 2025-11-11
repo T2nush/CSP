@@ -15,14 +15,20 @@ normal_letter = "blueletter.gif"
 wn.addshape(normal_letter)
 turtle_letter = turt.Turtle()
 turtle_letter.shape(normal_letter)
+
+def open_letter(x,y):
+    wn.bgcolor("lightblue")
+    turtle_letter.hideturtle()
+''''
 def go_blue(x,y):
     wn.bgcolor("LightBlue")
     turtle_letter.hideturtle()
 turtle_letter.onclick(go_blue)
+'''
 #-------------------------------------------------------
-# Text input/starting questions (name, age
-
-
+# Text input/starting questions (name, age)
+name = wn.textinput("Welcome", "Whats your name?")
+wn.textinput("Hi" + name + "!")
 
 
 wn.mainloop()
