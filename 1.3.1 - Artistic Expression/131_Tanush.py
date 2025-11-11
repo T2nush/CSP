@@ -1,11 +1,9 @@
-# TODO
-# TODO
+# TODO Start screen -> Open letter function (on click), send to next screen, give text input for user to insert their name then.  Nov 11
+# TODO 
 # TODO 
 # TODO
 # TODO
 # TODO
-
-
 
 import turtle as turt
 wn = turt.Screen()
