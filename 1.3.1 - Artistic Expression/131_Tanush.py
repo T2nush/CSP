@@ -28,9 +28,10 @@ turtle_letter.onclick(go_blue)
 #-------------------------------------------------------
 # Text input/starting questions (name, age)
 name = wn.textinput("Welcome", "Whats your name?")
-wn.textinput("Hi" + name + "!")
+wn.textinput("Hi" + name + "!", "Lets play: What's your dream JOB! Anwser either yes or no")
 
-
+#set up scores/job images and jobs (use gif convert at end(on doc))
+jobs = [Doctor,]
 wn.mainloop()
 
 
