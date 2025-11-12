@@ -2,8 +2,8 @@
 # TODO Name and age (to then get displayed at the end screen with the job profession image nov 12
 # TODO Ask 10 questions, each leading up to the next, answers result in an output of a profession. Nov 12-13
 # TODO Create generating code to fetch the jobs based on answers (takes 2 yeses in one category to funnel into 2 jobs, and 2 no’s in one subject to eliminate other choices). NOV 14 (consultancy protocol help)
-# TODO
-# TODO
+# TODO Code to pick the job with the highest score 
+# TODO Display final screen with job, name, picture of job and congratulate and then finiish the events
 
 import turtle as turt
 wn = turt.Screen()
@@ -57,7 +57,7 @@ scores = {job: 0 for job in jobs}
 #questions
 q1 = wn.textinput("Question 1","Do you enjoy helping your community? (yes/no)")
 if q1 = "yes":
-    
+                                                                                                
 
 
 
