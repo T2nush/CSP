@@ -8,29 +8,18 @@
 import turtle as turt
 wn = turt.Screen()
 pen = turt.Turtle()
+wn.title("Dream Job Finder")
 #Letter part 
-def start_screen():
-    pen.penup()
-    pen.goto(0,120)
-    pen.pendown()
-    pen.write("Hangman Game", align="center", font=("Arial", 25, "bold"))
-    pen.penup()
-
-def go_blue(x,y):
-    wn.bgcolor("LightBlue")
-    turtle_letter.hideturtle()
-    # Text input/starting questions (name, age)
-    name = wn.textinput("Welcome, Whats your name?")
     wn.textinput("Hi" + name + "!", "Lets play: What's your dream JOB! Anwser either yes or no")
-
-
 turtle_letter = turt.Turtle()
-turtle_letter.onclick(go_blue)
-wn.setup(width=600, height=600)
 normal_letter = "blueletter.gif"
 wn.addshape(normal_letter)
+
 turtle_letter = turt.Turtle()
 turtle_letter.shape(normal_letter)
+turtle_letter.penup()
+pen = turt.Turtle()
+pen.hideturtle()
 #-------------------------------------------------------
 #set up scores/job images and jobs (use gif convert at end(on doc))
 jobs = ["Doctor","Artist","Engineer","Astronaut", "Teacher","Athlete","Firefighter","Chef"]
@@ -51,6 +40,24 @@ for pic in job_pics.values():
         wn.addshape(pic)
     except:
         pass 
+
+def go_blue(x,y):
+    wn.bgcolor("LightBlue")
+    turtle_letter.hideturtle()
+    pen.clear()
+    # Text input/starting questions (name, age)
+name = wn.textinput("Welcome", "Whats your name?")
+wn.textinput("Hi" + name + "!", "Whats your dream JOB Anwser yes or no")
+if not name: 
+    name = "Friend"
+# \n\n point for break for when new line displayed(write in doc)
+pen.clear()
+pen.penup()
+pen.goto(0, 0)
+message = f"Hi {name} Let's find your dream job!\n\nClick OK to start answering questions."
+pen.write(message, align="center", font=("Arial", 18, "bold"))
+
+
 #-------------------------------------------------------
 #scoring for jobs and how they are decided
 scores = {job: 0 for job in jobs}
