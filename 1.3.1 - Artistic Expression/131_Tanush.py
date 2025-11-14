@@ -3,8 +3,7 @@
 # TODO Ask 10 questions, each leading up to the next, answers result in an output of a profession. Nov 12-13
 # TODO Create generating code to fetch the jobs based on answers (takes 2 yeses in one category to funnel into 2 jobs, and 2 no’s in one subject to eliminate other choices). NOV 14 (consultancy protocol help)
 # TODO Code to pick the job with the highest score 
-# TODO Display final screen with job, name, picture of job and congratulate and then finiish the events
-
+# TODO Display final screen with job, name, picture of job and congratulate and then finish the events
 import turtle as turt
 wn = turt.Screen()
 pen = turt.Turtle()
@@ -24,7 +23,7 @@ pen.hideturtle()
 jobs = ["Doctor","Artist","Engineer","Astronaut", "Teacher","Athlete","Firefighter","Chef"]
 
 job_pics = {
-    "Doctor":"doctor.gif",
+    "Doctor":"docter.gif",
     "Artist":"artist.gif",
     "Engineer":"engineer.gif",
     "Astronaut":"astronaut.gif",
@@ -46,6 +45,7 @@ def go_blue(x,y):
     pen.clear()
 
     # Text input/starting questions (name, age)
+
 name = wn.textinput("Welcome", "Whats your name?")
 wn.textinput("Hi" + name + "!", "Whats your dream JOB Anwser yes or no")
 if not name: 
@@ -132,7 +132,13 @@ else:
 align = "center", font=("Arial",12,"normal"))
     
 #job title 
+title_writer = turt.Turtle()
+title_writer.hideturtle()
+title_writer.penup()
+title_writer.goto(0,150)
+title_writer.write(f"{name},you would be a great {best_job}", align="center",font=("Arial,",25,"bold"))
 
+wn.mainloop()
 
 
                   
