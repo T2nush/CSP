@@ -6,7 +6,6 @@
 # TODO Display final screen with job, name, picture of job and congratulate and then finish the events
 import turtle as turt
 wn = turt.Screen()
-pen = turt.Turtle()
 wn.title("Dream Job Finder")
 #Letter part 
 turtle_letter = turt.Turtle()
@@ -43,8 +42,12 @@ def go_blue(x,y):
     wn.bgcolor("LightBlue")
     turtle_letter.hideturtle()
     pen.clear()
+turtle_letter.onclick(go_blue)
 
     # Text input/starting questions (name, age)
+name = wn.textinput("Welcome", "What's your name?")
+if not name:
+        name = "Friend"
 
 name = wn.textinput("Welcome", "Whats your name?")
 wn.textinput("Hi" + name + "!", "Whats your dream JOB Anwser yes or no")
@@ -56,6 +59,7 @@ pen.clear()
 pen.penup()
 pen.goto(0, 0)
 message = f"Hi {name} Let's find your dream job!\n\nClick OK to start answering questions."
+message = f"Hi {name}! Let's find your dream job!"
 pen.write(message, align="center", font=("Arial", 18, "bold"))
 
 #-------------------------------------------------------
