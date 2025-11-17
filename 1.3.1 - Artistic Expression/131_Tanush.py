@@ -6,7 +6,9 @@
 # TODO Display final screen with job, name, picture of job and congratulate and then finish the events
 import turtle as turt
 wn = turt.Screen()
+pen = turt.Turtle()
 wn.title("Dream Job Finder")
+pen.penup()
 #Letter part 
 turtle_letter = turt.Turtle()
 normal_letter = "blueletter.gif"
@@ -15,8 +17,10 @@ wn.addshape(normal_letter)
 turtle_letter = turt.Turtle()
 turtle_letter.shape(normal_letter)
 turtle_letter.penup()
-pen = turt.Turtle()
-pen.hideturtle()
+turtle_letter.goto(0,0)
+
+pen.goto(0,-250)
+pen.write("Click the envelope to start", align="center", font=("Arial",20,"bold"))
 #-------------------------------------------------------
 #set up scores/job images and jobs (use gif convert at end(on doc))
 jobs = ["Doctor","Artist","Engineer","Astronaut", "Teacher","Athlete","Firefighter","Chef"]
@@ -31,22 +35,26 @@ job_pics = {
     "Firefighter":"firefighter.gif",
     "Chef":"chef.gif"
 }
+
 # Make the pics 
 for pic in job_pics.values():
     try: 
         wn.addshape(pic)
     except:
-        pass 
+        pass
 
 def go_blue(x,y):
+# ------------------------------------------------------
+def go_blue(x, y):
     wn.bgcolor("LightBlue")
     turtle_letter.hideturtle()
     pen.clear()
 turtle_letter.onclick(go_blue)
 
     # Text input/starting questions (name, age)
-name = wn.textinput("Welcome", "What's your name?")
 if not name:
+    name = wn.textinput("Welcome", "What's your name?")
+    if not name:
         name = "Friend"
 
 name = wn.textinput("Welcome", "Whats your name?")
@@ -141,6 +149,8 @@ title_writer.hideturtle()
 title_writer.penup()
 title_writer.goto(0,150)
 title_writer.write(f"{name},you would be a great {best_job}", align="center",font=("Arial,",25,"bold"))
+# ------------------------------------------------------
+turtle_letter.onclick(go_blue)
 
 wn.mainloop()
 
